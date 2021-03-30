@@ -1,2 +1,16 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h1><%=@user.full_name%>'s Show</h1><hr>
+
+<li>Age: <%= @user.age %></li>
+<li>Address: <%= @user.address %></li>
+<li>user: <%= @user.gender %></li>
+
+<h3> Donations </h3>
+<% @user.donations.each do |donation| %>
+    <li><%= link_to "$#{donation.amount}", donation %> </li>
+<% end %>
+
+<h3> Projects </h3>
+
+<% @user.projects.each do |project|%>
+    <li><%= link_to project.name, project %> </li>
+<% end %>

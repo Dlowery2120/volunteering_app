@@ -33,3 +33,4 @@ v3 = VolunteerSignup.create(user_id: u3.id, project_id: p3.id)
 d1 = Donation.create(amount: 50, user_id: u1.id, project_id: p1.id)
 d2 = Donation.create(amount: 60, user_id: u2.id, project_id: p2.id)
 d3 = Donation.create(amount: 10, user_id: u3.id, project_id: p3.id)
+
