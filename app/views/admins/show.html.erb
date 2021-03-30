@@ -1,2 +1,16 @@
-<h1>Admins#show</h1>
-<p>Find me in app/views/admins/show.html.erb</p>
+
+
+<h1><%=@admin.full_name%></h1><hr>
+
+<li>Age: <%= @admin.age %></li>
+<li>Address: <%= @admin.address %></li>
+<li>Email: <%= @admin.email %></li>
+<li>Phone Number: <%= @admin.phone_number %></li>
+
+
+<h3> Projects </h3>
+<% @admin.projects.each do |project| %>
+    <li><%= link_to project.name, project %> </li>
+<% end %>
+
+

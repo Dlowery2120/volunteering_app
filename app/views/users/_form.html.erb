@@ -1,9 +1,9 @@
 <%= form_with model: @user do |f| %>
     First Name: <%= f.text_field :first_name%> 
     Last Name: <%= f.text_field :last_name%><br><br> 
-    Age: <%= f.number_field :age %><br><br> 
-    Address: <%= f.text_field :address%><br><br> 
-    Gender: <%= f.select :gender, ['Male', 'Female', 'Other']%><br><br>
+    <%= f.number_field :age %><br><br> 
+    <%= f.text_field :address%><br><br> 
+    <%= f.select :gender, ['Male', 'Female', 'Other']%><br><br>
     <%= f.submit %>
 <%end%> 
     
