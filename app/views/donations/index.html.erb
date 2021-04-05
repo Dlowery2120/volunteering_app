@@ -1,6 +1,0 @@
-<h1>Donations#index</h1>
-
-<% @donations.each do |donation| %>
-    <li><%= link_to "$#{donation.amount} by #{donation.user.full_name}", donation %> </li>
-<% end %>
-    

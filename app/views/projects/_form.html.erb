@@ -1,3 +1,18 @@
+<style>
+.form { 
+    text-align: center;
+    }
+body { 
+    background: url("https://i.ibb.co/GT24R4t/Brown-and-Orange-Neutral-Delicate-Organic-Fashion-Marketing-Presentation-8.png") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    }  
+</style>
+<body>
+
+<div class= "form">
 <%= form_with model: @project do |f| %>
     Name: <%= f.text_field :name%> 
     <br><br>
@@ -6,3 +21,4 @@
     <br><br>
     <%= f.submit %>
 <%end%> 
+</div>

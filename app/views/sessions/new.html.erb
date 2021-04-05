@@ -9,16 +9,21 @@ body {
     -o-background-size: cover;
     background-size: cover;
     }  
-
     h1 {
-        font-family: Comic Sans MS, Comic Sans, cursive;
+        font-family: Comic Sans MS, Comic Sans, cursive
     }
 </style>
 <body>
-
 <div class= "form">
 <img src="https://i.ibb.co/cyXRxyX/Screen-Shot-2021-04-01-at-3-37-04-PM.png" style="width:200px;height:142px;">
-<h1>Make a New Donation</h1>
-
-<%= render 'form' %>
+    <h1> Login </h1> <br>
+    <%= form_with model: @user, url: login_path, method: :post do | f | %>
+    <%= f.label :email %> <br>
+    <%= f.text_field :email %> <br><br>
+    <%= f.label :password %> <br>
+    <%= f.password_field :password %> <br><br>
+    <%= f.submit "Log in"%><br><br>
+    <strong><%= link_to "Sign up", new_user_path %></strong>
+    <% end %>
 </div>
+</body>

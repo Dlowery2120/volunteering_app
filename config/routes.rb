@@ -11,9 +11,16 @@ Rails.application.routes.draw do
     get "/login", to: "sessions#new"
     # action after we submit ^ that form
     post "/login", to: "sessions#create"  
+
+    get "/admlogin", to: "admsessions#new"
+    post "/admlogin", to: "admsessions#create"  
   
   
     # route to logout
     delete "/logout", to: "sessions#destroy"
     # form for sign up unless? 
+    delete "/logout", to: "admsessions#destroy"
+
+
+ 
 end

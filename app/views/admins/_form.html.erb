@@ -15,7 +15,7 @@ body {
 <body>
 
 <div class= "form">
-<%= form_with model: @user do |f| %>
+<%= form_with model: @admin do |f| %>
     First Name: <%= f.text_field :first_name%> <br><br>
     Last Name: <%= f.text_field :last_name%><br><br>
     Email: <%= f.text_field :email %><br><br> 
@@ -23,9 +23,7 @@ body {
     Age: <%= f.number_field :age%><br><br> 
     Phone number: <%= f.text_field :phone_number%><br><br> 
     Address: <%= f.text_field :address%><br><br> 
-    Project: <%= f.collection_select(:project_id, Project.all, :id, :name) %><br><br> 
     <%= f.submit %>
-
 <%end%> 
 </div>
     

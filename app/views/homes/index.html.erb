@@ -1,4 +1,23 @@
-<h1> Welcome to United!! </h1>
-
-<li><%= link_to %></li>
-<%= button_to "I Have a Project", "/login", method: :new %>
+<style>
+body { 
+    background: url("https://i.ibb.co/P4QBXPG/Brown-and-Orange-Neutral-Delicate-Organic-Fashion-Marketing-Presentation-9.png") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  .link {
+    background-color: orange;
+    color: white;
+    padding: 1em 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+  }
+</style>
+<body>
+<br><br>
+<strong class = "link"><%= link_to "Manage Project", admlogin_path %> </strong><br><br><br>
+<br>
+<strong class = "link"><%= link_to "Volunteer", login_path %></strong>
+</body>

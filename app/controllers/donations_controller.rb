@@ -1,7 +1,4 @@
 class DonationsController < ApplicationController
-  def index
-    @donations = Donation.all
-  end
 
   def show
     @donation = Donation.find(params[:id])
@@ -11,27 +8,25 @@ class DonationsController < ApplicationController
     @donation = Donation.new
   end
 
-  def create
-    @donation = Donation.new(donation_params)
-    @donation.save
+    def create
+      # @donation = Donation.new(donation_params)
+      # @donation.save
 
-    redirect_to @donation
-  end
+      @donation = Donation.create!(amount: params[:donation][:amount], user_id: session[:id], project_id: params[:donation][:project_id])
+      
+       
+       
+      redirect_to current_user
+    end
 
   def edit
     @donation = Donation.find(params[:id])
-    
-    
   end
   
   def update
     @donation = Donation.find(params[:id])
     @donation.update(donation_params)
     redirect_to @donation
-  end
-
-  def delete
-    
   end
 
 private

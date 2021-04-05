@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+
   def index
     @projects = Project.all
   end
@@ -12,8 +13,7 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    @project = Project.new(admin_params)
-    @project.save
+    @project = Project.create!(name: params[:project][:name], date: params[:project][:date], bio: params[:project][:bio], admin_id: session[:id])
 
     redirect_to @project
   end
@@ -28,10 +28,11 @@ class ProjectsController < ApplicationController
     redirect_to @project
   end
 
-  def delete
-
+  def destroy
+    @project = Project.find(params[:id])
+    @project.destroy
+    redirect_to admlogin_path
   end
-
 private
 
   def project_params

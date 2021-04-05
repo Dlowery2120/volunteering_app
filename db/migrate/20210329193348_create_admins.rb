@@ -8,7 +8,7 @@ class CreateAdmins < ActiveRecord::Migration[6.1]
       t.integer :age
       t.integer :phone_number
       t.string :address
-      
+       
 
       t.timestamps
     end

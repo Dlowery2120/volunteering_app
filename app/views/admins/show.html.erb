@@ -1,16 +1,39 @@
+<style>
+.form { 
+    text-align: center;
+    }
+body { 
+    background: url("https://i.ibb.co/GT24R4t/Brown-and-Orange-Neutral-Delicate-Organic-Fashion-Marketing-Presentation-8.png") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    }  
+</style>
+<body>
+
+<div class= "form">
+<img src="https://i.ibb.co/cyXRxyX/Screen-Shot-2021-04-01-at-3-37-04-PM.png" style="width:200px;height:142px;">
+<%= button_to "log out", "/logout", method: :delete %>
+<hr>
+<h1><%=@admin.full_name%></h1>
 
 
-<h1><%=@admin.full_name%></h1><hr>
-
-<li>Age: <%= @admin.age %></li>
-<li>Address: <%= @admin.address %></li>
-<li>Email: <%= @admin.email %></li>
-<li>Phone Number: <%= @admin.phone_number %></li>
+Age: <%= @admin.age %><br>
+Address: <%= @admin.address %><br>
+Email: <%= @admin.email %><br>
+Phone Number: <%= @admin.phone_number %><br>
 
 
 <h3> Projects </h3>
 <% @admin.projects.each do |project| %>
     <li><%= link_to project.name, project %> </li>
 <% end %>
-
-
+<br><br><br>
+<strong><%= link_to "Create a new project", new_project_path %></strong>
+<br><br><br>
+<strong><%= link_to "All United Volunteers", users_path %></strong>
+<br><br><br>
+<strong><%= link_to "Edit my informations", edit_admin_path %></strong>
+<br><br><br>
+<%= button_to "Delete my account", @admin, method: :delete %>

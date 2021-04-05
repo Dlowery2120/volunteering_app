@@ -1,4 +1,5 @@
 class AdminsController < ApplicationController
+  
   def index
     @admins = Admin.all
   end
@@ -20,6 +21,7 @@ class AdminsController < ApplicationController
 
   def edit
     @admin = Admin.find(params[:id])
+    
   end
   
   def update
@@ -28,13 +30,15 @@ class AdminsController < ApplicationController
     redirect_to @admin
   end
 
-  def delete
-
+  def destroy
+    @admin = Admin.find(params[:id])
+    @admin.destroy
+    redirect_to admlogin_path
   end
 
 private
 
   def admin_params
-    params.require(:admin).permit(:first_name, :last_name, :age, :address, :gender)
+    params.require(:admin).permit(:first_name, :last_name, :email, :password, :age, :phone_number, :address)
   end
 end

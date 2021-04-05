@@ -1,5 +1,42 @@
-<h1>All Projects</h1>
+
+
+<style>
+.form { 
+    text-align: center
+    }
+body { 
+    background: url("https://i.ibb.co/GT24R4t/Brown-and-Orange-Neutral-Delicate-Organic-Fashion-Marketing-Presentation-8.png") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    }  
+.name {
+    
+    text-decoration: underline;
+}
+
+.ran {
+    font-size: 12px
+}
+</style>
+<body>
+
+<div class= "form">
+<img src="https://i.ibb.co/cyXRxyX/Screen-Shot-2021-04-01-at-3-37-04-PM.png" style="width:200px;height:142px;">
+<h1>Available Projects</h1>
 
 <% @projects.each do |project|%>
-<li><%= link_to project.name, project%></li>
+<strong class = "name"><%= project.name %></strong> -
+<%= project.date %><br>
+<%= project.bio %><br>
+<strong class = "ran"> Ran by:</strong> <%= project.admin.full_name %><br><br>
+
 <%end%>
+<br><br>
+<strong><%= link_to "Sign up For a Project", new_volunteer_signup_path %></strong>
+<br><br>
+<strong><%= link_to "Make a Donation", new_donation_path %></strong>
+<br><br>
+<strong><%= button_to "log out", "/logout", method: :delete %></strong>
+</div>
