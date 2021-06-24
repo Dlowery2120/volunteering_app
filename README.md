@@ -1,24 +1,29 @@
-# README
+# United Volunteering
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![Demo Gif](https://github.com/Dlowery2120/volunteering_app/blob/master/app/assets/images/united.gif?raw=true)
 
-Things you may want to cover:
+## Features
+Sign in/Sign up option for User with authenticated password.
 
-* Ruby version
+Join project groups
 
-* System dependencies
+Make Donations
 
-* Configuration
+Full CRUD capabilities for projects such as:
 
-* Database creation
+Create a volunteering project.
 
-* Database initialization
+View all projects created or joined for the logged in user.
 
-* How to run the test suite
+Edit/Delete only the projects by the logged in user.
 
-* Services (job queues, cache servers, search engines, etc.)
+## Tech Stack
+This web app makes use of the following:
 
-* Deployment instructions
+Ruby 
 
-* ...
+Rails - MVC Web Framework
+
+SQLite3 - Database
+
+BCrypt - Gem for encryption
