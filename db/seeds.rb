@@ -30,7 +30,7 @@ u12 = User.create(first_name: "Donovan", last_name: "Sanders", age: 28, address:
 a1 = Admin.create(first_name: "Rico", last_name: "Lowery", age: 26, address: "123 Berry Lane", phone_number: 51255555555, email: "rico@gmail.com", password: "rico")
 a2 = Admin.create(first_name: "Liberty", last_name: "Torres", age: 30, address: "456 Bluffstone Rock", phone_number: 5121111111, email: "liberty@gmail.com", password: "liberty")
 a3 = Admin.create(first_name: "Angelo", last_name: "Xenakis", age: 28, address: "567 Rain Lane", phone_number: 51255555555, email: "angelo@gmail.com", password: "angelo")
-a4 = Admin.create(first_name: "Ian", last_name: "Davies", age: 26, address: "123 Berry Lane", phone_number: 51255555555, email: "ian@gmail.com", password: "ian")
+a4 = Admin.create(first_name: "Ian", last_name: "Davies", age: 36, address: "123 Berry Lane", phone_number: 51255555555, email: "ian@gmail.com", password: "ian")
 a5 = Admin.create(first_name: "Antonio", last_name: "Reid", age: 30, address: "456 Bluffstone Rock", phone_number: 51255555555, email: "antonio@gmail.com", password: "antonio")
 a6 = Admin.create(first_name: "Nestor", last_name: "Venegas", age: 28, address: "567 Rain Lane", phone_number: 51255555555, email: "nestor@gmail.com", password: "nestor")
 
