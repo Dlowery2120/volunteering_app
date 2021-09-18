@@ -11,9 +11,9 @@ class Project < ApplicationRecord
     self.donations.map {|donation| donation.amount}.sum
     end
 
-    # def self.avg_age
-    #     age = self.users.map {|user| user.age}
-    #     age.sum / age.size
-    # end
+    def self.avg_age
+        age = self.users.map { |user| user.age}
+        age.sum / age.size
+    end
 
 end
